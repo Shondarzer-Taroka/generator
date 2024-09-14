@@ -1,0 +1,88 @@
+
+
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <script>
+
+    let obj={
+      start:1,
+      end:5,
+      [Symbol.iterator]:function*(){
+         let currentValue=this.start
+         while (currentValue<=this.end) {
+            yield currentValue++
+         }
+      }
+    }
+
+      let value= obj[Symbol.iterator]()
+      console.log(value.next())
+      console.log(value.next())
+      console.log(value.next())
+      console.log(value.next())
+      console.log(value.next())
+      console.log(value.next())
+      console.log(value.next())
+      
+
+      // generator function
+
+      function* newGenerator() {
+       yield 1
+       yield 2
+       yield 3
+        yield 4
+        yield 5
+      }
+     
+      let iteratot=newGenerator()
+      console.log(iteratot.next());
+      console.log(iteratot.next());
+      console.log(iteratot.next());
+      console.log(iteratot.next());
+      console.log(iteratot.next());
+         
+
+      var array=[1,2,3,43,56,7,8,9,10]
+
+      function* hellowyen() {
+         for (let i = 0; i < array.length; i++) {
+           yield array[i]
+            
+         }
+         
+      }
+
+    let orr=  hellowyen(array)
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+    console.log(orr.next())
+
+      
+
+      
+
+      
+
+      
+
+
+    </script>
+   </head>
+   <body>
+    <h3>  hello,Javascript</h3>
+   </body>
+   </html>
